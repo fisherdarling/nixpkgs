@@ -40,6 +40,10 @@
       gca = "git commit --amend --no-edit";
     };
   };
+
+  programs.helix = {
+    enable = true;
+  };
   
   # services.gpg-agent = {
   #   enable = true;
