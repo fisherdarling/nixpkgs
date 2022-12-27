@@ -22,4 +22,19 @@
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
+
+  # homebrew config since most GUIs aren't on nix
+  homebrew = {
+    enable = true;
+    # updates homebrew packages on activation,
+    # can make darwin-rebuild much slower (otherwise i'd forget to do it ever though)
+    casks = [
+      # "hammerspoon"
+      # "amethyst"
+      # "alfred"
+      # "logseq"
+      # "discord"
+      # "iina"
+    ];
+  };
 }
