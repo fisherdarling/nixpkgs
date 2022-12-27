@@ -38,12 +38,12 @@
     };
   };
   
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 1800;
-    enableSshSupport = true;
-    sshKeys = [
-      "/Users/fisher/.ssh/id_ed25519"
-    ];
-  };
+  # services.gpg-agent = {
+  #   enable = true;
+  #   defaultCacheTtl = 1800;
+  #   enableSshSupport = true;
+  #   sshKeys = [
+  #     "/Users/fisher/.ssh/id_ed25519"
+  #   ];
+  # };
 }
