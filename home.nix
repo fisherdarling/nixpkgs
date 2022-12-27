@@ -1,21 +1,49 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home.username = "fisher";
-  # home.homeDirectory = "/Users/fisher";
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
+  
+  home.packages = with pkgs; [
+    helix
+    inetutils
+    git
+    gnupg
+  ];
+  
   home.stateVersion = "22.11";
-
-  # Let Home Manager install and manage itself.
+  
   programs.home-manager.enable = true;
+  
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "z"
+        "ssh-agent"
+      ];
+    };
+  };
+  
+  programs.git = {
+    enable = true;
+    userName = "fisher";
+    userEmail = "fisher@darling.dev";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
+  
+  services.gpg-agent = {
+    enable = true;
+    defaultCacheTtl = 1800;
+    enableSshSupport = true;
+    sshKeys = [
+      "/Users/fisher/.ssh/id_ed25519"
+    ];
+  };
 }
