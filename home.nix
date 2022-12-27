@@ -36,6 +36,9 @@
     extraConfig = {
       init.defaultBranch = "main";
     };
+    aliases = {
+      gca = "git commit --amend --no-edit";
+    };
   };
   
   # services.gpg-agent = {
