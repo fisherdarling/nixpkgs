@@ -1,2 +1,2 @@
-#!/bin/bash
 darwin-rebuild switch --flake .
+source ~/.zshrc
