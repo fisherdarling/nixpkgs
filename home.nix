@@ -42,6 +42,10 @@
     shellAliases = {
       gca = "git commit --amend --no-edit";
     };
+
+    initExtra = ''
+      export PATH="$HOME/.cargo/bin:$PATH"
+    '';
   };
 
   programs.git = {
@@ -55,6 +59,16 @@
 
   programs.helix = {
     enable = true;
+
+    settings = {
+      theme = "onedark";
+      
+      editor = {
+        auto-format = true;
+        lsp.display-messages = true; 
+        file-picker.hidden = false;
+      };
+    };
   };
 
   # services.gpg-agent = {
