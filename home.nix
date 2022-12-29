@@ -11,6 +11,8 @@
     fzf
     ripgrep
     nil
+    rustc
+    cargo
   ];
 
   home.stateVersion = "22.11";

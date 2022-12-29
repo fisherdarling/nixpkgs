@@ -9,7 +9,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
+  outputs = { nixpkgs, home-manager, darwin, ... }: {
     darwinConfigurations = {
       "lykos" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
