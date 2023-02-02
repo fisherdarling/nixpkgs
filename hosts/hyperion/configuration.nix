@@ -121,7 +121,7 @@
   
   programs.zsh.enable = true;
 
-  nix.allowedUsers = [ "fisher" ];
+  nix.settings.allowed-users = [ "fisher" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
