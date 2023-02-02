@@ -27,5 +27,20 @@
         ];
       };
     };
+    
+    nixosConfigurations = {
+      "hyperion" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/hyperion/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.fisher = import ./home.nix;
+          }
+        ];
+      };
+    };
   };
 }
