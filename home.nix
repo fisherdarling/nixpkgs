@@ -14,6 +14,7 @@
     nil
     rustc
     cargo
+    clang
   ];
 
   home.stateVersion = "22.11";
