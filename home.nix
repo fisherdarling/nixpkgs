@@ -15,6 +15,7 @@
     rustc
     cargo
     clang
+    htop    
   ];
 
   home.stateVersion = "22.11";
