@@ -4,6 +4,7 @@
   home.username = "fisher";
 
   home.packages = with pkgs; [
+    file
     helix
     inetutils
     git
