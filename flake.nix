@@ -7,9 +7,10 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    vscode-server.url = "github:msteen/nixos-vscode-server";
   };
 
-  outputs = { nixpkgs, home-manager, darwin, ... }: {
+  outputs = { nixpkgs, home-manager, darwin, vscode-server, ... }: {
     darwinConfigurations = {
       "lykos" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
@@ -39,6 +40,10 @@
             home-manager.useUserPackages = true;
             home-manager.users.fisher = import ./home.nix;
           }
+          vscode-server.nixosModule
+          ({ config, pkgs, ... }: {
+            services.vscode-server.enable = true;
+          })
         ];
       };
     };
