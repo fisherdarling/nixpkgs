@@ -16,6 +16,7 @@
     cargo
     clang
     htop    
+    nil
   ];
 
   home.stateVersion = "22.11";
