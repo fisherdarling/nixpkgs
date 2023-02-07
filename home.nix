@@ -12,11 +12,13 @@
     fzf
     ripgrep
     nil
-    rustc
-    cargo
+    rustup
     clang
     htop    
     nil
+    llvm
+    gnumake
+    perl
   ];
 
   home.stateVersion = "22.11";
