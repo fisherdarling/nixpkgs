@@ -176,20 +176,36 @@
   };
   
   networking.wireguard.interfaces = {
+    # ohea0 = {
+    #  ips = [ "200::3/7" ];
+    #  listenPort = 50005;
+    #  
+    #  privateKeyFile = "/home/fisher/.wg/private.key";
+    #  
+    #  peers = [
+    #    {
+    #      publicKey = "EvRk1VzVD9o0ki+42KsW3Z3Wq1hObdDun5jMiA0aJXc=";
+    #      allowedIPs = [ "200::/7" ];
+    #      endpoint = "164.92.165.127:50005";
+    #      persistentKeepalive = 25;
+    #    }   
+    #  ];        
+    # };  
+
     ohea0 = {
-      ips = [ "200::3/7" ];
-      listenPort = 50005;
-      
-      privateKeyFile = "/home/fisher/.wg/private.key";
-      
+      ips = [ "255::2/7" ];
+      listenPort = 50004;
+
+      privateKeyFile = "/home/fisher/.wg/private2.key";
+
       peers = [
         {
           publicKey = "EvRk1VzVD9o0ki+42KsW3Z3Wq1hObdDun5jMiA0aJXc=";
           allowedIPs = [ "200::/7" ];
           endpoint = "164.92.165.127:50005";
           persistentKeepalive = 25;
-        }   
-      ];        
-    };  
+        }
+      ];
+    };
   };
 }
