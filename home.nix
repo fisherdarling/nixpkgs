@@ -19,6 +19,10 @@
     llvm
     gnumake
     perl
+    rustc
+    cargo
+    wezterm
+    poetry
   ];
 
   home.stateVersion = "22.11";

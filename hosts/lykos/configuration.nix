@@ -36,5 +36,9 @@
     casks = [
       "discord"
     ];
+
+    brews = [
+      "llvm"
+    ];
   };
 }
