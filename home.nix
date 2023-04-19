@@ -19,7 +19,6 @@
     llvm
     gnumake
     perl
-    rustc
     cargo
     wezterm
     poetry
