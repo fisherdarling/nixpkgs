@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [
+    (import "${fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz"}/overlay.nix")
+  ];
+
   home.username = "fisher";
 
   home.packages = with pkgs; [
@@ -12,7 +16,6 @@
     fzf
     ripgrep
     nil
-    rustup
     clang
     htop    
     nil
@@ -22,6 +25,7 @@
     cargo
     wezterm
     poetry
+    fenix.default.stable 
   ];
 
   home.stateVersion = "22.11";
