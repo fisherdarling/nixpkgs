@@ -16,6 +16,7 @@
     cargo
     wezterm
     poetry
+    zellij
   ];
 
   home.stateVersion = "22.11";
