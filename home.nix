@@ -17,6 +17,7 @@
     wezterm
     poetry
     zellij
+    deno
   ];
 
   home.stateVersion = "22.11";
