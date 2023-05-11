@@ -18,6 +18,7 @@
     poetry
     zellij
     deno
+    wasmtime
   ];
 
   home.stateVersion = "22.11";
