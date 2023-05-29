@@ -25,7 +25,9 @@
     cargo
     wezterm
     poetry
-    fenix.default.stable 
+    zellij
+    deno
+    wasmtime
   ];
 
   home.stateVersion = "22.11";
