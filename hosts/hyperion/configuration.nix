@@ -42,7 +42,6 @@
          chainloader /EFI/Microsoft/Boot/bootmgfw.efi
       }
       '';
-      version = 2;
       useOSProber = true;
     };
   };
@@ -89,7 +88,12 @@
  #   windowManager.i3.enable = true;
 #  };    
   services.xserver.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+
+  services.xserver.windowManager = {
+    i3.package = pkgs.i3-gaps;
+    i3.enable = true;
+  };
+  
   services.xserver.layout = "us";
   
 
@@ -144,7 +148,7 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  services.openssh.permitRootLogin = "no";
+  services.openssh.settings.PermitRootLogin = "no";
   services.openssh.ports = [5151];
   
   programs.mosh.enable = true;
@@ -174,7 +178,8 @@
       experimental-features = nix-command flakes
     '';
   };
-  
+  nixpkgs.config.allowUnfree = true; 
+ 
   networking.wireguard.interfaces = {
     # ohea0 = {
     #  ips = [ "200::3/7" ];
