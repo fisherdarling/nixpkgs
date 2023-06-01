@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   nix.settings = {
     keep-outputs = true;
     keep-derivations = true;
   };
+
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -15,6 +17,8 @@
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+
+  users.users.fisher.home = "/Users/fisher";
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
