@@ -32,6 +32,14 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  fonts.fontDir.enable = true;
+
+  fonts.fonts = with pkgs; [
+    fira-code
+    fira-code-symbols
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   # homebrew config since most GUIs aren't on nix
   homebrew = {
     enable = true;
