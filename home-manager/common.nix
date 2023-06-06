@@ -101,7 +101,7 @@
 
       return {
         font = wezterm.font 'Fira Code',
-        font_size = 14.0,
+        font_size = 12.0,
         hide_tab_bar_if_only_one_tab = true,
         window_padding = {
           left = 5,
@@ -120,6 +120,8 @@
       hostname = {
         ssh_only = false;
       };
+
+      add_newline = false;
     };
   };
 }
