@@ -103,6 +103,7 @@
         font = wezterm.font 'Fira Code',
         font_size = 12.0,
         hide_tab_bar_if_only_one_tab = true,
+        color_scheme = 'OneDark (base16)',
         window_padding = {
           left = 5,
           right = 5,
