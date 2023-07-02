@@ -12,10 +12,8 @@
     fzf
     ripgrep
     nil
-    clang
     htop    
     nil
-    llvm
     gnumake
     perl
     rustup
@@ -88,7 +86,25 @@
       editor = {
         auto-format = true;
         lsp.display-messages = true; 
+        lsp.display-inlay-hints = true;
         file-picker.hidden = false;
+        bufferline = "multiple";
+        
+        color-modes = true;
+        cursorline = true;
+        line-number = "relative";
+        
+
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
+
+        indent-guides = {
+          render = true;
+          character = "▏";
+        };
       };
     };
   };

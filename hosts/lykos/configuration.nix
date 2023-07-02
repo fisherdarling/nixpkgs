@@ -11,7 +11,8 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [
-    pkgs.vim
+    pkgs.vim    
+    pkgs.darwin.apple_sdk.frameworks.Security
   ];
 
   # Use a custom configuration.nix location.
