@@ -23,7 +23,6 @@
     deno
     wasmtime
     nodejs
-    discord
 
     # fonts
     fira-code

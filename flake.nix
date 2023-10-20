@@ -48,6 +48,19 @@
           })
         ];
       };
+
+      "luna" = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [
+          ./hosts/luna/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.fisher = import ./hosts/luna/home.nix;
+          }
+        ];
+      };
     };
   };
 }
