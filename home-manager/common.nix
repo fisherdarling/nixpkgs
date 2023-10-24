@@ -23,6 +23,7 @@
     deno
     wasmtime
     nodejs
+    zola
 
     # fonts
     fira-code
@@ -104,8 +105,24 @@
           render = true;
           character = "▏";
         };
+
+        soft-wrap = {
+          enable = true;
+        };
       };
+
     };
+
+      languages = {
+        language = [
+          {
+            name = "markdown";
+            indent = {
+              tab-width = 4;
+            };
+          }
+        ];
+      };
   };
 
   programs.wezterm = {
